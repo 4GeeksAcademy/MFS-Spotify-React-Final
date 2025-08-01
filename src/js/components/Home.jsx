@@ -7,8 +7,8 @@ import SongList from "./SongList";
 const Home = () => {
 	const [url] = useState("https://playground.4geeks.com")
 
-	const [songs, setSongs] = useState([{
-		"songs": [
+	const [songs, setSongs] = useState([
+		
 			{
 				"id": 1,
 				"name": "Mario Castle",
@@ -123,11 +123,8 @@ const Home = () => {
 				"url": "/sound/files/cartoons/songs/x-men.mp3",
 				"category": "cartoon"
 			}
-		]
-	}
-	]);
-
-
+		])
+	;
 
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [isPlaying, setIsPlaying] = useState(false);
@@ -160,7 +157,14 @@ const Home = () => {
 
 
 	const togglePlay = () => {
-		setIsPlaying((prev) => !prev);
+		if (!audioRef.current) return;
+		if (isPlaying) {
+			audioRef.current.pause();
+		} 
+		else {audioRef.current.play();
+			
+		}
+		setIsPlaying(!isPlaying);
 	};
 
 	const nextSong = () => {
@@ -175,7 +179,7 @@ const Home = () => {
 };
 	return (
 
-		<div className="container bg-dark text-red ">
+		<div className="container bg-ligth">
 			<SongList
 				songs={songs}
 				currentIndex={currentIndex}

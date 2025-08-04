@@ -12,7 +12,8 @@ const SongList = ({ songs, currentIndex, setCurrentIndex }) => {
             onClick={() => {
               setCurrentIndex(index);
             }}
-            style={{ cursor: 'pointer' }}
+            className={`list-group-item text-light ${index === currentIndex ? "bg-secundary text-dark" : "bg-dark text-light"}`}
+            style={{ darkcursor: 'pointer' }}
           >
             {song.name}
           </li>

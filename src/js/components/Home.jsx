@@ -165,7 +165,7 @@ const Home = () => {
 			
 		}
 		setIsPlaying(!isPlaying);
-	};s
+	};
 
 	const nextSong = () => {
 		setCurrentIndex((prev) => (prev + 1) % songs.length);
@@ -194,7 +194,7 @@ const Home = () => {
 			/>
 			<audio
 				ref={audioRef}
-				src={songs[currentIndex]?.url}
+				src={url + songs[currentIndex]?.url}
 				autoPlay={isPlaying}
 				onEnded={handleEnd}
 			/>

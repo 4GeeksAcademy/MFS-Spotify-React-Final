@@ -10,11 +10,14 @@
 
 */
 body{
-    background-color: rgb(58, 58, 58);
+    background-color: rgb(40, 40, 40);
+color: white;
     
 }
 
 .fixed-player {
- position:fixed;
+    position:fixed;
     width: 100%;
+    z-index: 1000;
+    bottom: 0;
 } 

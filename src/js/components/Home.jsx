@@ -165,7 +165,7 @@ const Home = () => {
 			
 		}
 		setIsPlaying(!isPlaying);
-	};
+	};s
 
 	const nextSong = () => {
 		setCurrentIndex((prev) => (prev + 1) % songs.length);
@@ -186,7 +186,7 @@ const Home = () => {
 				setCurrentIndex={setCurrentIndex}
 			/>
 			<Player
-				playing={isPlaying ? "pause" : "play"}
+				playing={isPlaying}
 				togglePlay={togglePlay}
 				nextSong={nextSong}
 				prevSong={prevSong}
@@ -198,6 +198,7 @@ const Home = () => {
 				autoPlay={isPlaying}
 				onEnded={handleEnd}
 			/>
+			
 		</div>
 	);
 };

@@ -12,7 +12,7 @@ const SongList = ({ songs, currentIndex, setCurrentIndex }) => {
             onClick={() => {
               setCurrentIndex(index);
             }}
-            style={{cursor:'pointer'}}
+            style={{ cursor: 'pointer' }}
           >
             {song.name}
           </li>

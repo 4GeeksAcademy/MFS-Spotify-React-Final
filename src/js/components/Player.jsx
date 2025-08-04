@@ -9,7 +9,7 @@ const Player = ({ playing, togglePlay, nextSong, prevSong }) => {
           <i className="fa-solid fa-backward"></i>
         </button>
         <button onClick={togglePlay} className="btn btn-outline-light">
-          <i className={'fa-solid&{ playing === "play" ? "fa-play" : "fa-pause"}'}></i>
+          <i className={`fa-solid ${playing ? "fa-pause" : "fa-play"}`}></i>
         </button>
         <button onClick={nextSong} className="btn btn-outline-light ">
           <i className="fa-solid fa-forward"></i>
